@@ -18,6 +18,7 @@ public class FloatService {
             b[i] = new HalfPrecision(rawB[i]);
         }
 
+
         makeDiagonallyDominant(A, b, n);
 
         HalfPrecision[][] C = new HalfPrecision[n][n];
