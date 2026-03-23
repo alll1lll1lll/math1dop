@@ -24,7 +24,7 @@ public class HalfPrecision {
         if (exp32 == 255) {
             return (short) (sign | 0x7C00 | (mantissa32 != 0 ? 0x0200 : 0));
         }
-
+        //чтобы экспонента была неотрицательнрой нужно смещение для float32 - 127 , а для float16 - 15)))
         int exp16 = exp32 - 127 + 15;
 
         if (exp16 >= 31) {
@@ -43,7 +43,7 @@ public class HalfPrecision {
         int sign = (hbits & 0x8000) << 16;
         int exp16 = (hbits & 0x7C00) >>> 10;
         int mantissa16 = hbits & 0x03FF;
-
+        //обработка переполнения/андефлоу
         if (exp16 == 0) {
             return Float.intBitsToFloat(sign);
         }

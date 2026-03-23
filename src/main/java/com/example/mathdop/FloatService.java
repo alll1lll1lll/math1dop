@@ -89,7 +89,7 @@ public class FloatService {
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < n; i++) {
-            sb.append(String.format(Locale.US, "%.30f ", x[i].get()));
+            sb.append(String.format(Locale.US, "%.3f ", x[i].get()));
         }
         sb.append("\n");
 
