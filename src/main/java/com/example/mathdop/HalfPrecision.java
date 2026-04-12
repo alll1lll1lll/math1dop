@@ -43,7 +43,7 @@ public class HalfPrecision {
         int sign = (hbits & 0x8000) << 16;
         int exp16 = (hbits & 0x7C00) >>> 10;
         int mantissa16 = hbits & 0x03FF;
-        //обработка переполнения/андефлоу
+        //обработка переполнения/андефлоуаххахаха
         if (exp16 == 0) {
             return Float.intBitsToFloat(sign);
         }
