@@ -33,7 +33,7 @@ public class HalfPrecision {
         if (exp16 <= 0) {
             return (short) sign;
         }
-        //у float16 мантисса 10 бит, а у float32 23 битаlsdp[el[dpf[pdfцк-=цукp;e;f[pfwхзахувдзpdpdpdpepdfpofds[odfp[dpfpfpfpf
+        //у float16 мантисса 10 бит, а у float32 23 битаlsdp[el[dpf[pdfцк-=цукp;e;f[pfwхзахувдзpdpdpdpepdfpofds[odfp[dpfpfpfpff[[f[f[f
         int mantissa16 = mantissa32 >>> 13;
 
         return (short) (sign | (exp16 << 10) | mantissa16);
